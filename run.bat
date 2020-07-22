@@ -1,2 +1,2 @@
-python3 manage.py runserver
+python manage.py runserver
 pause
