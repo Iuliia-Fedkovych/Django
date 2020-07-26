@@ -7,15 +7,7 @@
 {% endblock %}
 {% block content %}
     <div class="product_information_menu">
-        <ul class="tab-control">
-            <li><a href="#" class="product_menu product_menu_active">All</a></li>
-            <li><a href="#" class="product_menu">HOME</a></li>
-            <li><a href="#" class="product_menu">OFFICE</a></li>
-            <li><a href="#" class="product_menu">FURNITURE</a></li>
-            <li><a href="#" class="product_menu">MODERN</a></li>
-            <li><a href="#" class="product_menu">CLASSIC</a></li>
-        </ul>
-
+        {% include 'mainapp/include/inc_submenu.html' %}
     </div>
     <div class="product_information padding_site">
         <div class="product_slider">

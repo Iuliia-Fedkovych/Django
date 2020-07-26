@@ -1,0 +1,9 @@
+<ul class="tab-control">
+    {% for link in submenu %}
+        <li>
+            <a href="{% url link.href %}" class="product_menu {% if request.resolver_match.url_name == link.href %}product_menu_active{% endif %}">
+                {{link.name}}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
