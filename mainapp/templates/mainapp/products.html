@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Interior: Fishnet Chair</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/8fece0c8ba.js"></script>
 </head>
 
@@ -14,7 +15,7 @@
         <div class="top">
             <div class="product_details_menu padding_site">
                 <div class="header">
-                    <a href="/" class="logo"><img src="/static/img/logo.svg" alt="logo"></a>
+                    <a href="/" class="logo"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
                     <ul class="menu">
                         <li><a href="/" class="menu__link">HOME</a></li>
                         <li><a href="/products/" class="menu__link menu__link_active">PRODUCTS</a></li>
@@ -40,9 +41,9 @@
                 <div class="product_slider">
                     <div class="product_slider_big"></div>
                     <div class="product_slider_elem">
-                        <div class="product_slider_small" style="background-image: url(/static/img/controll.jpg)"></div>
-                        <div class="product_slider_small" style="background-image: url(/static/img/controll11.jpg)"></div>
-                        <div class="product_slider_small" style="background-image: url(/static/img/controll2.jpg)"></div>
+                        <div class="product_slider_small" style="background-image: url({% static 'img/controll.jpg' %})"></div>
+                        <div class="product_slider_small" style="background-image: url({% static 'img/controll11.jpg' %})"></div>
+                        <div class="product_slider_small" style="background-image: url({% static 'img/controll2.jpg' %})"></div>
                     </div>
 
                 </div>
@@ -63,21 +64,21 @@
                     <a href="#" class="btn_ghost">explore all <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="tab_content">
-                    <div class="trending_product" style="background-image: url(/static/img/product-11.jpg)">
+                    <div class="trending_product" style="background-image: url({% static 'img/product-11.jpg' %})">
                         <div class="product_content">
                             <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
                             <h2 class="product_name">Fishnet Chair</h2>
                             <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
                         </div>
                     </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-21.jpg)">
+                    <div class="trending_product" style="background-image: url({% static 'img/product-21.jpg' %})">
                         <div class="product_content">
                             <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
                             <h2 class="product_name">Fishnet Chair</h2>
                             <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
                         </div>
                     </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-31.jpg)">
+                    <div class="trending_product" style="background-image: url({% static 'img/product-31.jpg' %})">
                         <div class="product_content">
                             <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
                             <h2 class="product_name">Fishnet Chair</h2>
@@ -119,10 +120,10 @@
                 <div class="copyright">&copy;&nbsp;Copyright&nbsp;&mdash; INTERIOR 2016. All Rights Reserved.</div>
 
                 <div class="social">
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20facebook%20by%20alfredocreates.svg" alt="facebook"></a>
-                    <a href="#" class="social_link"><img src="/static/img/twitter%20online%20social%20media%20by%20alfredocreates.svg" alt="twitter"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20google%20plus%20by%20alfredocreates.svg" alt="google plus"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20pinterest%20by%20alfredocreates.svg" alt="pinterest"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/online%20social%20media%20facebook%20by%20alfredocreates.svg' %}" alt="facebook"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/twitter%20online%20social%20media%20by%20alfredocreates.svg' %}" alt="twitter"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/online%20social%20media%20google%20plus%20by%20alfredocreates.svg' %}" alt="google plus"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/online%20social%20media%20pinterest%20by%20alfredocreates.svg' %}" alt="pinterest"></a>
                 </div>
 
 

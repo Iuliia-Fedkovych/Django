@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Interior: contacts</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/8fece0c8ba.js"></script>
 </head>
 
@@ -14,7 +15,7 @@
         <div class="top">
             <div class="header_menu padding_site">
                 <div class="header">
-                    <a href="/" class="logo"><img src="/static/img/logo.svg" alt="logo"></a>
+                    <a href="/" class="logo"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
                     <ul class="menu">
                         <li><a href="/" class="menu__link">HOME</a></li>
                         <li><a href="/products/" class="menu__link">PRODUCTS</a></li>
@@ -91,10 +92,10 @@
                 <div class="copyright">&copy;&nbsp;Copyright&nbsp;&mdash; INTERIOR 2016. All Rights Reserved.</div>
 
                 <div class="social">
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20facebook%20by%20alfredocreates.svg" alt="facebook"></a>
-                    <a href="#" class="social_link"><img src="/static/img/twitter%20online%20social%20media%20by%20alfredocreates.svg" alt="twitter"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20google%20plus%20by%20alfredocreates.svg" alt="google plus"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20pinterest%20by%20alfredocreates.svg" alt="pinterest"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/online%20social%20media%20facebook%20by%20alfredocreates.svg' %}" alt="facebook"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/twitter%20online%20social%20media%20by%20alfredocreates.svg' %}" alt="twitter"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/online%20social%20media%20google%20plus%20by%20alfredocreates.svg' %}" alt="google plus"></a>
+                    <a href="#" class="social_link"><img src="{% static 'img/online%20social%20media%20pinterest%20by%20alfredocreates.svg' %}" alt="pinterest"></a>
                 </div>
                 <div class="copyright">Terms &amp;&nbsp;Conditions&nbsp;/ Privacy policy &amp;&nbsp;Cookies</div>
 
