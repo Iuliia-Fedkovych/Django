@@ -8,35 +8,17 @@
 {% endblock %}
 {% block content %}
             <div class="contacts padding_site">
-                <div class="adress_link">
-                    <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
-                    <p class="state">California</p>
-                    <p class="contats">Phone:</p>
-                    <p class="contact_details">1900-1234-5678</p>
-                    <p class="contats">Email:</p>
-                    <p class="contact_details">info@interior.com</p>
-                    <p class="contats">Address:</p>
-                    <p class="adress_details">12 W 1st St, 90001 Los Angeles, California</p>
-                </div>
-                <div class="adress_link">
-                    <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
-                    <p class="state">California</p>
-                    <p class="contats">Phone:</p>
-                    <p class="contact_details">1900-1234-5678</p>
-                    <p class="contats">Email:</p>
-                    <p class="contact_details">info@interior.com</p>
-                    <p class="contats">Address:</p>
-                    <p class="adress_details">12 W 1st St, 90001 Los Angeles, California</p>
-                </div>
-                <div class="adress_link">
-                    <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
-                    <p class="state">California</p>
-                    <p class="contats">Phone:</p>
-                    <p class="contact_details">1900-1234-5678</p>
-                    <p class="contats">Email:</p>
-                    <p class="contact_details">info@interior.com</p>
-                    <p class="contats">Address:</p>
-                    <p class="adress_details">12 W 1st St, 90001 Los Angeles, California</p>
-                </div>
+                {% for item in locations %}
+                    <div class="adress_link">
+                        <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
+                        <p class="state">{{ item.state }}</p>
+                        <p class="contats">Phone:</p>
+                        <p class="contact_details">{{ item.phone }}</p>
+                        <p class="contats">Email:</p>
+                        <p class="contact_details">{{ item.email }}</p>
+                        <p class="contats">Address:</p>
+                        <p class="adress_details">{{ item.address}} </p>
+                    </div>
+                {% endfor %}
             </div>
 {% endblock %}

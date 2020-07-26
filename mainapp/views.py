@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render
 
 
@@ -28,7 +29,11 @@ def products(request):
 
 
 def contact(request):
+    with open('geekshop/locations.json', 'r', encoding='utf-8') as f:
+        locations = json.load(f)
+
     context = {
-        'title': 'contacts'
+        'title': 'contacts',
+        'locations': locations
     }
     return render(request, 'mainapp/contact.html', context)
