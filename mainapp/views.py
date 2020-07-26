@@ -10,7 +10,17 @@ def main(request):
 
 
 def products(request):
-    same_products = []
+    related_products = [
+        {'name': 'lamp',
+         'short_desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+         'img': 'product-11.jpg'},
+        {'name': 'chair',
+         'short_desc': 'Steel frame, available in matt powder-coated black or highly polished chrome.',
+         'img': 'product-21.jpg'},
+        {'name': 'chair',
+         'short_desc': 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+         'img': 'product-31.jpg'}
+    ]
     submenu = [
         {'href': 'products_all', 'name': 'all'},
         {'href': 'products_home', 'name': 'home'},
@@ -22,7 +32,7 @@ def products(request):
     ]
     context = {
         'title': 'products',
-        'same-products': same_products,
+        'related_products': related_products,
         'submenu': submenu
     }
     return render(request, 'mainapp/products.html', context)
