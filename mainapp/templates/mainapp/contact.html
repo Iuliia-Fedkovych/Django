@@ -15,13 +15,13 @@
         <div class="top">
             <div class="header_menu padding_site">
                 <div class="header">
-                    <a href="/" class="logo"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
+                    <a href="{% url 'main' %}" class="logo"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
                     <ul class="menu">
-                        <li><a href="/" class="menu__link">HOME</a></li>
-                        <li><a href="/products/" class="menu__link">PRODUCTS</a></li>
+                        <li><a href="{% url 'main' %}" class="menu__link">HOME</a></li>
+                        <li><a href="{% url 'products' %}" class="menu__link">PRODUCTS</a></li>
                         <li><a href="#" class="menu__link">HISTORY</a></li>
                         <li><a href="#" class="menu__link">SHOWROOM</a></li>
-                        <li><a href="/contact/" class="menu__link menu__link_active">CONTACT</a></li>
+                        <li><a href="{% url 'contact' %}" class="menu__link menu__link_active">CONTACT</a></li>
                         <li><a href="#" class="menu__link"><i class="fas fa-search"></i></a></li>
                     </ul>
 
