@@ -1,199 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Interior: products</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <script src="https://kit.fontawesome.com/8fece0c8ba.js"></script>
-</head>
-
-<body>
-    <div class="container">
-        <div class="top">
-            <div class="header_menu padding_site">
-                <div class="header">
-                    <a href="/" class="logo"><img src="/static/img/logo.svg" alt="logo"></a>
-                    <ul class="menu">
-                        <li><a href="/" class="menu__link">HOME</a></li>
-                        <li><a href="/products/" class="menu__link menu__link_active">PRODUCTS</a></li>
-                        <li><a href="#" class="menu__link">HISTORY</a></li>
-                        <li><a href="#" class="menu__link">SHOWROOM</a></li>
-                        <li><a href="/contact/" class="menu__link">CONTACT</a></li>
-                        <li><a href="#" class="menu__link"><i class="fas fa-search"></i></a></li>
-                    </ul>
-
-                </div>
-                <h2 class="slider__h2 interior_header">Our Products Range</h2>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block menu %}
+    <div class="product_details_menu padding_site">
+        {% include 'mainapp/include/inc_main_menu.html' %}
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="product_information_menu">
+        {% include 'mainapp/include/inc_submenu.html' %}
+    </div>
+    <div class="product_information padding_site">
+        <div class="product_slider">
+            <div class="product_slider_big"></div>
+            <div class="product_slider_elem">
+                <div class="product_slider_small" style="background-image: url({% static 'img/controll.jpg' %})"></div>
+                <div class="product_slider_small" style="background-image: url({% static 'img/controll11.jpg' %})"></div>
+                <div class="product_slider_small" style="background-image: url({% static 'img/controll2.jpg' %})"></div>
             </div>
-            <div class="products padding_site">
-                <div class="hading_featured">
-                    <ul class="tab-control">
-                        <li><a href="#" class="product_menu product_menu_active">All</a></li>
-                        <li><a href="#" class="product_menu">HOME</a></li>
-                        <li><a href="#" class="product_menu">OFFICE</a></li>
-                        <li><a href="#" class="product_menu">FURNITURE</a></li>
-                        <li><a href="#" class="product_menu">MODERN</a></li>
-                        <li><a href="#" class="product_menu">CLASSIC</a></li>
-                    </ul>
-                </div>
-                <div class="tab_content">
-                    <div class="trending_product" style="background-image: url(/static/img/product-11.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-21.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-31.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-41.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-5.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-6.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-11.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-21.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-31.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-41.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-5.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
-                    <div class="trending_product" style="background-image: url(/static/img/product-6.jpg)">
-                        <div class="product_content">
-                            <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
-                            <h2 class="product_name">Fishnet Chair</h2>
-                            <p class="text_reg text_product">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        </div>
-                    </div>
 
-                </div>
-                <div class="refresh_circle">
-                    <a href="#" class="refresh"><i class="fas fa-sync-alt"></i></a>
-                </div>
-
-            </div>
-            <div class="promo">
-                <div class="promo_img" style="background-image: url(/static/img/promo-img1.jpg)">
-                    <div class="promo_content">
-                        <div class="color_text color_exclusive">exclusive</div>
-                        <h2 class="promo_h2">Fishnet Chair</h2>
-                        <p class="text_reg propmo_p">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        <a href="#" class="button button_long">Order Us <i class="fas fa-chevron-right"></i></a>
-                    </div>
-
-                </div>
-                <div class="promo_img" style="background-image: url(/static/img/promo-img.jpg)">
-                    <div class="promo_content">
-                        <div class="color_text color_exclusive">exclusive</div>
-                        <h2 class="promo_h2">Fishnet Chair</h2>
-                        <p class="text_reg propmo_p">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
-                        <a href="#" class="button button_long">Order Us <i class="fas fa-chevron-right"></i></a>
-                    </div>
-
-                </div>
-            </div>
         </div>
-        <div class="footer padding_site">
-            <div class="fotter_content">
-                <div class="contact_us">
-                    <div class="color_text text_contact_us">Contact Us</div>
-                    <div class="adress"> 132A Bridge Road Richmond VIC Australia.</div>
-                    <div class="adress"> Talk to us on 1300 132 info@interior.com</div>
-                </div>
-                <div class="useful">
-                    <div class="color_text text_contact_us">Useful Information</div>
-                    <div class="useful_links">
-                        <a href="#" class="use_link">Sales terms</a>
-                        <a href="#" class="use_link">Architect accounts</a>
-                        <a href="#" class="use_link">Customer care</a>
-                        <a href="#" class="use_link">Careers</a>
-                        <a href="#" class="use_link">Delivery</a>
-                        <a href="#" class="use_link">Exchanges &amp; returns</a>
+        <h2 class="product_details-name float">Fishnet Chair</h2>
+        <div class="product_info_hot float">Hot Deal</div>
+        <div class="price float">$&nbsp;<span class="price_font">36.7</span>/sq</div>
+        <a href="#" class="button_product float">Order Us <i class="fas fa-chevron-right"></i></a>
+        <p class="product_description">The majesty of Mountains - Ugmonk style.</p>
+        <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ncididunt ut labore</p>
+        <p class="product_description">et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="product_description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="product_description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+
+    </div>
+    <div class="trending padding_site">
+        <div class="hading_trending">
+            <h2 class="trending_h2">Related Products</h2>
+            <a href="#" class="btn_ghost">explore all <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="tab_content">
+            {% for item in related_products %}
+                <div class="trending_product" style="background-image: url(/static/img/{{ item.img }})">
+                    <div class="product_content">
+                        <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
+                        <h2 class="product_name">{{ item.name }}</h2>
+                        <p class="text_reg text_product">{{ item.short_desc }}</p>
                     </div>
                 </div>
-                <div class="stay_in_touch">
-                    <div class="color_text text_contact_us">Let&rsquo;s Stay in&nbsp;Touch!</div>
-                    <div class="adress"> Suscribe to know about our latest news, products and special offers just for suscribers.</div>
-                    <form action="#" class="contact_form">
-                        <input type="email" class="email" placeholder="your email address">
-                        <a href="#" class="icon_link"><i class="fab fa-telegram-plane"></i></a>
-                    </form>
-                </div>
-            </div>
-            <div class="footer_footer">
-                <div class="copyright">&copy;&nbsp;Copyright&nbsp;&mdash; INTERIOR 2016. All Rights Reserved.</div>
-
-                <div class="social">
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20facebook%20by%20alfredocreates.svg" alt="facebook"></a>
-                    <a href="#" class="social_link"><img src="/static/img/twitter%20online%20social%20media%20by%20alfredocreates.svg" alt="twitter"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20google%20plus%20by%20alfredocreates.svg" alt="google plus"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20pinterest%20by%20alfredocreates.svg" alt="pinterest"></a>
-                </div>
-                <div class="copyright">Terms &amp;&nbsp;Conditions&nbsp;/ Privacy policy &amp;&nbsp;Cookies</div>
-
-            </div>
-
+            {% endfor %}
         </div>
     </div>
-
-</body>
-
-</html>
+{% endblock %}

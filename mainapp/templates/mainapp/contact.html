@@ -1,108 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Interior: contacts</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <script src="https://kit.fontawesome.com/8fece0c8ba.js"></script>
-</head>
-
-<body>
-    <div class="container">
-        <div class="top">
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block menu %}
             <div class="header_menu padding_site">
-                <div class="header">
-                    <a href="/" class="logo"><img src="/static/img/logo.svg" alt="logo"></a>
-                    <ul class="menu">
-                        <li><a href="/" class="menu__link">HOME</a></li>
-                        <li><a href="/products/" class="menu__link">PRODUCTS</a></li>
-                        <li><a href="#" class="menu__link">HISTORY</a></li>
-                        <li><a href="#" class="menu__link">SHOWROOM</a></li>
-                        <li><a href="/contact/" class="menu__link menu__link_active">CONTACT</a></li>
-                        <li><a href="#" class="menu__link"><i class="fas fa-search"></i></a></li>
-                    </ul>
-
-                </div>
+                {% include 'mainapp/include/inc_main_menu.html' %}
                 <h2 class="slider__h2 interior_header">Contact Us</h2>
             </div>
+{% endblock %}
+{% block content %}
             <div class="contacts padding_site">
-                <div class="adress_link">
-                    <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
-                    <p class="state">California</p>
-                    <p class="contats">Phone:</p>
-                    <p class="contact_details">1900-1234-5678</p>
-                    <p class="contats">Email:</p>
-                    <p class="contact_details">info@interior.com</p>
-                    <p class="contats">Address:</p>
-                    <p class="adress_details">12 W 1st St, 90001 Los Angeles, California</p>
-                </div>
-                <div class="adress_link">
-                    <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
-                    <p class="state">California</p>
-                    <p class="contats">Phone:</p>
-                    <p class="contact_details">1900-1234-5678</p>
-                    <p class="contats">Email:</p>
-                    <p class="contact_details">info@interior.com</p>
-                    <p class="contats">Address:</p>
-                    <p class="adress_details">12 W 1st St, 90001 Los Angeles, California</p>
-                </div>
-                <div class="adress_link">
-                    <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
-                    <p class="state">California</p>
-                    <p class="contats">Phone:</p>
-                    <p class="contact_details">1900-1234-5678</p>
-                    <p class="contats">Email:</p>
-                    <p class="contact_details">info@interior.com</p>
-                    <p class="contats">Address:</p>
-                    <p class="adress_details">12 W 1st St, 90001 Los Angeles, California</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer padding_site">
-            <div class="fotter_content">
-                <div class="contact_us">
-                    <div class="color_text text_contact_us">Contact Us</div>
-                    <div class="adress"> 132A Bridge Road Richmond VIC Australia.</div>
-                    <div class="adress"> Talk to us on 1300 132 info@interior.com</div>
-                </div>
-                <div class="useful">
-                    <div class="color_text text_contact_us">Useful Information</div>
-                    <div class="useful_links">
-                        <a href="#" class="use_link">Sales terms</a>
-                        <a href="#" class="use_link">Architect accounts</a>
-                        <a href="#" class="use_link">Customer care</a>
-                        <a href="#" class="use_link">Careers</a>
-                        <a href="#" class="use_link">Delivery</a>
-                        <a href="#" class="use_link">Exchanges &amp; returns</a>
+                {% for item in locations %}
+                    <div class="adress_link">
+                        <a href="#" class="location_link"><i class="fas fa-map-marker-alt"></i></a>
+                        <p class="state">{{ item.state }}</p>
+                        <p class="contats">Phone:</p>
+                        <p class="contact_details">{{ item.phone }}</p>
+                        <p class="contats">Email:</p>
+                        <p class="contact_details">{{ item.email }}</p>
+                        <p class="contats">Address:</p>
+                        <p class="adress_details">{{ item.address}} </p>
                     </div>
-                </div>
-                <div class="stay_in_touch">
-                    <div class="color_text text_contact_us">Let&rsquo;s Stay in&nbsp;Touch!</div>
-                    <div class="adress"> Suscribe to know about our latest news, products and special offers just for suscribers.</div>
-                    <form action="#" class="contact_form">
-                        <input type="email" class="email" placeholder="your email address">
-                        <a href="#" class="icon_link"><i class="fab fa-telegram-plane"></i></a>
-                    </form>
-                </div>
+                {% endfor %}
             </div>
-            <div class="footer_footer">
-                <div class="copyright">&copy;&nbsp;Copyright&nbsp;&mdash; INTERIOR 2016. All Rights Reserved.</div>
-
-                <div class="social">
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20facebook%20by%20alfredocreates.svg" alt="facebook"></a>
-                    <a href="#" class="social_link"><img src="/static/img/twitter%20online%20social%20media%20by%20alfredocreates.svg" alt="twitter"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20google%20plus%20by%20alfredocreates.svg" alt="google plus"></a>
-                    <a href="#" class="social_link"><img src="/static/img/online%20social%20media%20pinterest%20by%20alfredocreates.svg" alt="pinterest"></a>
-                </div>
-                <div class="copyright">Terms &amp;&nbsp;Conditions&nbsp;/ Privacy policy &amp;&nbsp;Cookies</div>
-
-            </div>
-
-        </div>
-    </div>
-
-</body>
-
-</html>
+{% endblock %}
