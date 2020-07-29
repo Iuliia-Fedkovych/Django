@@ -36,8 +36,8 @@
             <a href="#" class="btn_ghost">explore all <i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="tab_content">
-            {% for item in related_products %}
-                <div class="trending_product" style="background-image: url(/static/img/{{ item.img }})">
+            {% for item in products %}
+                <div class="trending_product" style="background-image: url(/media/{{ item.image }})">
                     <div class="product_content">
                         <a href="#" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
                         <h2 class="product_name">{{ item.name }}</h2>

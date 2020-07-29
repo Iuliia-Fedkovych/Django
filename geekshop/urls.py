@@ -26,11 +26,11 @@ urlpatterns = [
     path('contact/', mainapp.contact, name='contact'),
 
     path('products/all', mainapp.products, name='products_all'),
-    path('products/home', mainapp.products, name='products_home'),
-    path('products/office', mainapp.products, name='products_office'),
-    path('products/furniture', mainapp.products, name='products_furniture'),
-    path('products/modern', mainapp.products, name='products_modern'),
-    path('products/classic', mainapp.products, name='products_classic'),
+    path('products/home', mainapp.products, name='home'),
+    path('products/office', mainapp.products, name='office'),
+    path('products/furniture', mainapp.products, name='furniture'),
+    path('products/modern', mainapp.products, name='modern'),
+    path('products/classic', mainapp.products, name='classic'),
 
     path('admin/', admin.site.urls),
 

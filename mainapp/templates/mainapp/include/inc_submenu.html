@@ -1,7 +1,7 @@
 <ul class="tab-control">
-    {% for link in submenu %}
+    {% for link in categories %}
         <li>
-            <a href="{% url link.href %}" class="product_menu {% if request.resolver_match.url_name == link.href %}product_menu_active{% endif %}">
+            <a href="{% url link.name %}" class="product_menu {% if request.resolver_match.url_name == link.name %}product_menu_active{% endif %}">
                 {{link.name}}
             </a>
         </li>
