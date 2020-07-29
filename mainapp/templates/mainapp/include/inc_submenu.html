@@ -1,7 +1,13 @@
 <ul class="tab-control">
+    <li>
+        <a href="{% url 'products:category' 0 %}"
+           class="product_menu {% if request.resolver_match.kwargs.pk == 0 %} product_menu_active {% endif %}">
+            all
+        </a>
+    </li>
     {% for link in categories %}
         <li>
-            <a href="{% url link.name %}" class="product_menu {% if request.resolver_match.url_name == link.name %}product_menu_active{% endif %}">
+            <a href="{% url 'products:category' link.pk %}" class="product_menu {% if request.resolver_match.kwargs.pk == link.pk %}product_menu_active{% endif %}">
                 {{link.name}}
             </a>
         </li>

@@ -13,17 +13,8 @@ def main(request):
     return render(request, 'mainapp/index.html', context)
 
 
-def products(request):
-    submenu = [
-        {'href': 'products_all', 'name': 'all'},
-        {'href': 'products_home', 'name': 'home'},
-        {'href': 'products_office', 'name': 'office'},
-        {'href': 'products_furniture', 'name': 'furniture'},
-        {'href': 'products_modern', 'name': 'modern'},
-        {'href': 'products_classic', 'name': 'classic'},
-
-    ]
-
+def products(request, pk=None):
+    print(pk)
     products = Product.objects.all()[:3]
     categories = ProductCategory.objects.all()
 
