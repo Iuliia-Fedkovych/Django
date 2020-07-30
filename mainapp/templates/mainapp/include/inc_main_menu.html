@@ -6,7 +6,7 @@
             HOME
             </a>
         </li>
-        <li><a href="{% url 'products' %}" class="menu__link {% if request.resolver_match.url_name == 'products' %}menu__link_active{% endif %}">PRODUCTS</a></li>
+        <li><a href="{% url 'mainapp:index' %}" class="menu__link {% if request.resolver_match.namespace == 'products' %}menu__link_active{% endif %}">PRODUCTS</a></li>
         <li><a href="#" class="menu__link">HISTORY</a></li>
         <li><a href="#" class="menu__link">SHOWROOM</a></li>
         <li><a href="{% url 'contact' %}" class="menu__link {% if request.resolver_match.url_name == 'contact' %}menu__link_active{% endif %}">CONTACT</a></li>
