@@ -1,0 +1,137 @@
+[
+    {
+        "category": "modern",
+        "name": "Ceiling lamp",
+        "image": "products_image/product-11.jpg",
+        "short_desc": "Lorem ipsum dolor",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui harum sunt eligendi ipsa aperiam amet minus deleniti impedit soluta vel",
+        "price": "253.00",
+        "quantity": "20"
+    },
+    {
+        "category": "furniture",
+        "name": "Kitchen chair",
+        "image": "products_image/product-21.jpg",
+        "short_desc": "Qui harum sunt eligendi",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio accusamus iusto quo ratione pariatur quas qui, autem nam quasi error earum possimus sint impedit ea animi itaque corporis mollitia voluptatum? Sequi doloremque nisi, excepturi sunt.",
+        "price": "486.00",
+        "quantity": "46"
+    },
+    {
+        "category": "classic",
+        "name": "Table lamp",
+        "image": "products_image/product-31.jpg",
+        "short_desc": "Lorem sunt eligendi",
+        "description": "Optio accusamus iusto quo ratione pariatur quas qui, autem nam quasi error earum possimus sint impedit ea animi itaque corporis mollitia voluptatum? Sequi doloremque nisi",
+        "price": "199.00",
+        "quantity": "5"
+    },
+    {
+        "category": "office",
+        "name": "Wall lamp",
+        "image": "products_image/product-41.jpg",
+        "short_desc": "Harum sunt eligendi",
+        "description": "Qui laboriosam, aliquam impedit magnam, expedita quas optio recusandae enim vero in voluptates quae eveniet non cupiditate ducimus perspiciatis tenetur quasi nemo eaque dolor accusamus ipsum odio. Dolores vel deserunt voluptate maxime totam consequatur cum quidem quia.",
+        "price": "213.00",
+        "quantity": "15"
+    },
+    {
+        "category": "home",
+        "name": "Mortar and pestle",
+        "image": "products_image/product-51.jpg",
+        "short_desc": "Quasi atque expedita",
+        "description": "Quos perferendis eos quae veritatis, culpa dignissimos mollitia magni eligendi voluptates, nesciunt, consectetur. Quis suscipit debitis eaque illum quam, inventore voluptates.",
+        "price": "165.00",
+        "quantity": "31"
+    },
+    {
+        "category": "modern",
+        "name": "Vase",
+        "image": "products_image/product-61.jpg",
+        "short_desc": "Aspernatur nostrum illo",
+        "description": "Aut, et consequuntur tempora earum repellat rem incidunt accusamus similique, tenetur voluptatem ducimus ipsam. Laborum, accusamus repellat eaque iure illum rerum soluta veniam sequi officia quisquam dicta ea.",
+        "price": "236.00",
+        "quantity": "12"
+    },
+    {
+        "category": "modern",
+        "name": "Table lamp",
+        "image": "products_image/product-71.jpg",
+        "short_desc": "Qui harum sunt eligendi",
+        "description": "Saepe perferendis ducimus reiciendis id esse laudantium quis error eos! Delectus dolor dolores vel in reprehenderit eveniet molestias sed, dignissimos laborum cumque neque aperiam officia ad velit fugiat ea possimus",
+        "price": "165.00",
+        "quantity": "17"
+    },
+    {
+        "category": "home",
+        "name": "Pitcher",
+        "image": "products_image/product-81.jpg",
+        "short_desc": "Distinctio soluta delectus",
+        "description": "Distinctio soluta delectus, aspernatur vitae sapiente officia nisi quibusdam porro corporis consequuntur illum ab et vero, ex ipsam temporibus inventore vel magnam! Dolor facilis ut modi quas accusamus veritatis architecto autem rerum. ",
+        "price": "59.00",
+        "quantity": "43"
+    },
+    {
+        "category": "home",
+        "name": "Floor lamp",
+        "image": "products_image/product-91.jpg",
+        "short_desc": "Soluta vel ea ducimus facere, cumque cum atque perferendis eos",
+        "description": "Explicabo ipsam nesciunt corporis ab, culpa minus temporibus illo atque? Tenetur esse velit quos repudiandae, voluptatem natus unde, beatae hic cupiditate inventore, explicabo impedit saepe consectetur. ",
+        "price": "236.00",
+        "quantity": "29"
+    },
+    {
+        "category": "office",
+        "name": "Ceiling lamp",
+        "image": "products_image/product-101.jpg",
+        "short_desc": "Quos perferendis eos quae veritatis, culpa dignissimos mollitia",
+        "description": "labore excepturi doloribus non voluptas vel animi possimus aliquam. Cumque quasi eos quam, sequi praesentium vel animi doloremque vitae facere,",
+        "price": "126.00",
+        "quantity": "45"
+    },
+    {
+        "category": "office",
+        "name": "Sofa",
+        "image": "products_image/product-111.jpg",
+        "short_desc": "Pariatur ad quas rem reiciendis molestias",
+        "description": "Mollitia dolorem, modi hic reiciendis. Provident molestiae voluptatum necessitatibus minima reiciendis tempora unde accusantium ratione magnam ipsa",
+        "price": "1065.00",
+        "quantity": "2"
+    },
+    {
+        "category": "classic",
+        "name": "Wall clock",
+        "image": "products_image/product-121.jpg",
+        "short_desc": "Aut, et consequuntur tempora earum repellat rem",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui laboriosam, aliquam impedit magnam, expedita quas optio recusandae enim vero in voluptates",
+        "price": "99.00",
+        "quantity": "16"
+    },
+    {
+        "category": "classic",
+        "name": "Armchair",
+        "image": "products_image/product-131.jpg",
+        "short_desc": "Mollitia dolorem, modi hic reiciendis",
+        "description": "Quis suscipit debitis eaque illum quam, inventore voluptates. Est magnam assumenda perspiciatis a, quam optio nihil distinctio doloremque reiciendis, iusto, fugit omnis ipsum",
+        "price": "862.00",
+        "quantity": "3"
+    },
+    {
+        "category": "furniture",
+        "name": "Fishnet chair",
+        "image": "products_image/product-141.jpg",
+        "short_desc": "Provident molestiae voluptatum necessitatibus minima",
+        "description": "Quis suscipit debitis eaque illum quam, inventore voluptates. Est magnam assumenda perspiciatis a, quam optio nihil distinctio doloremque reiciendis, iusto, fugit omnis ipsum? Numquam, dignissimos modi rem rerum porro voluptatem",
+        "price": "358.00",
+        "quantity": "56"
+    },
+    {
+        "category": "furniture",
+        "name": "Dining chair",
+        "image": "products_image/product-151.jpg",
+        "short_desc": "Distinctio soluta delectus",
+        "description": "Aspernatur nostrum illo, iste facere accusantium quaerat dolore unde molestias fugit officiis expedita ut ab nobis saepe minima vel sapiente odio, sunt. Distinctio soluta delectus, aspernatur vitae",
+        "price": "763.00",
+        "quantity": "23"
+    }
+  ]

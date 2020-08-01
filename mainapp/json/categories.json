@@ -1,0 +1,22 @@
+[
+    {
+        "name": "home",
+        "description": "comfortable stylish furniture and decor"
+    },
+    {
+        "name": "office",
+        "description": "modern ergonomic furniture"
+    },
+    {
+        "name": "furniture",
+        "description": "mollitia dolorem modi hic reiciendis"
+    },
+    {
+        "name": "modern",
+        "description": "dolorem modi hic reiciendis"
+    },
+    {
+        "name": "classic",
+        "description": "possimus minima ut temporibus nesciunt"
+    }
+]
