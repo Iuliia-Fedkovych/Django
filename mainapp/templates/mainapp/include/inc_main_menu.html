@@ -12,7 +12,7 @@
         <li><a href="{% url 'contact' %}" class="menu__link {% if request.resolver_match.url_name == 'contact' %}menu__link_active{% endif %}">CONTACT</a></li>
         {% if user.is_authenticated %}
         <li>
-            <a href = "#" class="menu__link">
+            <a href = "{% url 'auth:edit' %}" class="menu__link">
                 {{ user.first_name|default:'User' }}
             </a>
         </li>
