@@ -27,7 +27,7 @@ def products(request, pk=None):
 
 
 def contact(request):
-    with open('geekshop/locations.json', 'r', encoding='utf-8') as f:
+    with open('mainapp/json/locations.json', 'r', encoding='utf-8') as f:
         locations = json.load(f)
 
     context = {
