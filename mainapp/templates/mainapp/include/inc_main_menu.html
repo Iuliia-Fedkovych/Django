@@ -26,5 +26,13 @@
             {% endif %}
         </li>
         <li><a href="#" class="menu__link"><i class="fas fa-search"></i></a></li>
+        <li>
+            <a href="#" class="menu__link">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="use_link">
+                    {% if basket %} {{ basket|length }} {% endif %}
+                </span>
+            </a>
+        </li>
     </ul>
 </div>
