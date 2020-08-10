@@ -16,6 +16,7 @@ a {
     text-decoration: none;
 }
 
+
 .container {
     width: 1366px;
     margin: 0 auto;
@@ -802,4 +803,3 @@ a {
 .location_link:hover .fa-map-marker-alt {
     color: #6c6c6c;
 }
-
