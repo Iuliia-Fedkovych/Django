@@ -44,7 +44,8 @@ def products(request, pk=None):
     context = {
         'title': title,
         'products': products,
-        'categories': categories
+        'categories': categories,
+        'basket': basket
     }
     return render(request, 'mainapp/products.html', context)
 
