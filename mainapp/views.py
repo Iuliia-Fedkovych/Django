@@ -4,12 +4,20 @@ from django.shortcuts import render, get_object_or_404
 from basketapp.models import Basket
 from .models import ProductCategory, Product
 
+def get_basket(user):
+    if user.is_authenticated:
+        return Basket.objects.filter(user=user)
+    else:
+        return []
 
 def main(request):
     products = Product.objects.all()
+    basket = get_basket(request.user)
+
     context = {
         'title': 'home',
         'products': products,
+        'basket':basket,
     }
     return render(request, 'mainapp/index.html', context)
 
@@ -19,9 +27,8 @@ def products(request, pk=None):
     title = 'products'
     categories = ProductCategory.objects.all()
 
-    basket = []
-    if request.user.is_authenticated:
-        basket = Basket.objects.filter(user=request.user)
+    basket = get_basket(request.user)
+
 
     if pk is not None:
         if pk == 0:
@@ -54,8 +61,11 @@ def contact(request):
     with open('mainapp/json/locations.json', 'r', encoding='utf-8') as f:
         locations = json.load(f)
 
+    basket = get_basket(request.user)
+
     context = {
         'title': 'contacts',
-        'locations': locations
+        'locations': locations,
+        'basket': basket,
     }
     return render(request, 'mainapp/contact.html', context)
