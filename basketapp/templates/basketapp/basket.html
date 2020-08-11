@@ -5,11 +5,11 @@
 {% block content %}
     <div class="basket_list">
         {% include 'basketapp/includes/inc_basket_list.html' %}
-
-        <button class="btn btn-round">
-            <a href="{% url 'main' %}">
-                main
-            </a>
-        </button>
     </div>
+
+    <button class="btn btn-round">
+        <a href="{% url 'main' %}">
+            main
+        </a>
+    </button>
 {% endblock %}
