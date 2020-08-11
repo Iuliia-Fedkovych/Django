@@ -22,7 +22,7 @@
         <h2 class="product_details-name float">{{ product.name }}</h2>
         <div class="product_info_hot float">Hot Deal</div>
         <div class="price float">$&nbsp;<span class="price_font">{{ product.price }}</span>/sq</div>
-        <a href="#" class="button_product float">Order Us <i class="fas fa-chevron-right"></i></a>
+        <a href="{% url 'basket:add' product.pk %}" class="button_product float">Order Us <i class="fas fa-chevron-right"></i></a>
         <p class="product_description">{{ product.description }}</p>
 
     </div>
