@@ -1,0 +1,29 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block menu %}
+    <div class="product_details_menu padding_site">
+        {% include 'mainapp/include/inc_main_menu.html' %}
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="product_information_menu">
+        {% include 'mainapp/include/inc_submenu.html' %}
+    </div>
+    <div class="product_information padding_site">
+        <div class="product_slider">
+            <div class="product_slider_big" style="background-image: url(/media/{{ product.image}})"></div>
+            <div class="product_slider_elem">
+                <div class="product_slider_small" style="background-image: url(/media/{{ product.image }})"></div>
+                <div class="product_slider_small" style="background-image: url(/media/{{ product.image }})"></div>
+                <div class="product_slider_small" style="background-image: url(/media/{{ product.image }})"></div>
+            </div>
+
+        </div>
+        <h2 class="product_details-name float">{{ product.name }}</h2>
+        <div class="product_info_hot float">Hot Deal</div>
+        <div class="price float">$&nbsp;<span class="price_font">{{ product.price }}</span>/sq</div>
+        <a href="#" class="button_product float">Order Us <i class="fas fa-chevron-right"></i></a>
+        <p class="product_description">{{ product.description }}</p>
+
+    </div>
+{% endblock %}

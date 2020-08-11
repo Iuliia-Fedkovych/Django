@@ -699,13 +699,16 @@ a {
 .product_slider_big {
     width: 570px;
     height: 570px;
-    background-image: url(../img/slider1.jpg)
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .product_slider_small {
     width: 70px;
     height: 70px;
     margin: 10px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .product_slider_elem {

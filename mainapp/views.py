@@ -69,3 +69,13 @@ def contact(request):
         'basket': basket,
     }
     return render(request, 'mainapp/contact.html', context)
+
+
+def product(request, pk):
+    context = {
+        'title': 'product',
+        'categories': ProductCategory.objects.all(),
+        'product': get_object_or_404(Product, pk=pk),
+        'basket': get_basket(request.user),
+    }
+    return render(request, 'mainapp/product.html', context)

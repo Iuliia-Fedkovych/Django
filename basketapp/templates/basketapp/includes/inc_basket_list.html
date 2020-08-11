@@ -5,9 +5,9 @@
     <img src="/media/{{ item.product.image }}" alt="{{ item.product.short_desc }}">
     <span class="category_name">{{ item.product.category.name }}</span>
     <span class="product_name">{{ item.product.name }}</span>
-    <span class="product_price">{{ item.product.price }}</span>
+    <span class="product_price">{{ item.product.price }}&nbsp;$</span>
     <input type="number" name="{{ item.pk }}" min="0" value="{{ item.quantity }}">
-    <span class="product_cost">{{ item.product_cost }}</span>
+    <span class="product_cost">{{ item.product_cost }}&nbsp;$</span>
     <button class="btn btn-round">
         <a href="{% url 'basket:remove' item.pk %}" class="">
             delete
@@ -18,7 +18,7 @@
 
 {% if basket_items %}
 <div class="basket_summary">
-    in cart {{ basket_items.0.total_quantity }} products with total cost
-    {{ basket_items.0.total_cost }}
+    In the cart {{ basket_items.0.total_quantity }} products with total cost
+    {{ basket_items.0.total_cost }}&nbsp;$
 </div>
 {% endif %}
