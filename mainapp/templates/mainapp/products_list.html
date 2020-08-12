@@ -17,7 +17,7 @@
             {% for item in products %}
                 <div class="trending_product" style="background-image: url(/media/{{ item.image }})">
                     <div class="product_content">
-                        <a href="{% url 'basket:add' item.pk %}" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
+                        <a href="{% url 'products:product' item.pk %}" class="button btn_circle"><i class="fas fa-chevron-right chevron-circle"></i></a>
                         <h2 class="product_name">{{ item.name }}</h2>
                         <p class="text_reg text_product">{{ item.short_desc }}</p>
                     </div>

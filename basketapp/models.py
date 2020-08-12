@@ -7,3 +7,22 @@ class Basket(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='quantity', default=0)
     add_datetime = models.DateTimeField(verbose_name='time', auto_now_add=True)
+
+    @property
+    def product_cost(self):
+        "return cost of all products this type"
+        return self.product.price * self.quantity
+
+    @property
+    def total_quantity(self):
+        "return total quantity for user"
+        _items = Basket.objects.filter(user=self.user)
+        _totalquantity = sum([x.quantity for x in _items])
+        return _totalquantity
+
+    @property
+    def total_cost(self):
+        "return total cost for user"
+        _items = Basket.objects.filter(user=self.user)
+        _totalcost = sum([x.product_cost for x in _items])
+        return _totalcost
