@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<ul class="menu">
+    <li>
+        <a href="{% url 'main' %}">
+            to site
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'admin:users' %}"
+            class="{% if requested.resolver_match.url_name == 'users' %}
+                    active
+                    {% endif %}">
+            users
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'admin:categories' %}"
+            class="{% if requested.resolver_match.url_name == 'categories' or category.name %}
+                    active
+                    {% endif %}">
+           categories
+            {% if category %}
+            :<span>{{ category.name }}</span>
+            {% endif %}
+        </a>
+    </li>
+</ul>
