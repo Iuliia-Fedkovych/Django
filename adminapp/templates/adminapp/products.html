@@ -19,14 +19,14 @@
 						<a href="{% url 'admin:product_read' object.pk %}">more</a>
 					</button>
 					<button>
-						<a href="{% url 'admin:product_update' object.pk %}">edit/a>
+						<a href="{% url 'admin:product_update' object.pk %}">edit</a>
 					</button>
 					<button>
 						<a href="{% url 'admin:product_delete' object.pk %}">delete</a>
 					</button>
 				</div>
 				<div class="summary">
-					<b>цена</b>
+					<b>price</b>
 					<p>{{ object.price }}</p>
 					<b>quantity</b>
 					<p>{{ object.quantity }}</p>
