@@ -28,8 +28,7 @@ class Product(models.Model):
     price = models.DecimalField(verbose_name='Product price',
                                 max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveSmallIntegerField(verbose_name='storage quantity', default=0)
+    is_active = models.BooleanField(verbose_name='active', default=True)
 
     def __str__(self):
         return f'{self.name} ({self.category.name})'
-
-
