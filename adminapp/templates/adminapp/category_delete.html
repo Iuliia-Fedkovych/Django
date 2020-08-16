@@ -5,7 +5,7 @@
 {% block content %}
     <div class="category_delete">
         Are you sure you want to delete {{ category_to_delete.name }}?
-        <form action="{% url 'admin:category_delete' category_to_delete.pk %}" method="post">
+        <form action="{% url 'admin:category_delete' object.pk %}" method="post">
             {% csrf_token %}
             <input class="btn btn-danger" type="submit" value="delete">
         </form>
