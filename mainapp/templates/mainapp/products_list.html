@@ -12,6 +12,21 @@
     <div class="trending padding_site">
         <div class="hading_trending">
             <h2 class="trending_h2">Category: {{category.name|title}}</h2>
+            <div class="paginator">
+                {% if products.has_previous %}
+                    <a href="{% url 'products:page' category.pk products.previous_page_number %}">
+                        <
+                    </a>
+                {% endif %}
+                <span class="current">
+                    page {{ products.number }} from {{ products.paginator.num_pages }}
+                </span>
+                {% if products.has_next %}
+                    <a href="{% url 'products:page' category.pk products.next_page_number %}">
+                        >
+                    </a>
+                {% endif %}
+            </div>
         </div>
         <div class="tab_content">
             {% for item in products %}
