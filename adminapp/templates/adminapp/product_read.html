@@ -1,12 +1,13 @@
 {% extends 'adminapp/base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block content %}
     <div class="product_read">
         <div class="product_name">
             Product: <strong>{{ object.category.name|title }} / {{ object.name|title }}</strong>
         </div>
-        <img src="/media/{{ object.image|default:'products_images/default.jpg' }}" alt="{{ object.name }}">
+        <img src="{{ object.image|media_folder_products }}" alt="{{ object.name }}">
         <div class="summary">
             <b>price</b>
             <p>{{ object.price }}</p>
