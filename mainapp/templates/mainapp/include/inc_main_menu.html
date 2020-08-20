@@ -16,6 +16,13 @@
             </a>
         </li>
         {% endif %}
+        {% if user.is_superuser %}
+        <li>
+            <a href = "{% url 'adminapp:users' %}" class="menu__link">
+                admin
+            </a>
+        </li>
+        {% endif %}
         <li>
             {% if user.is_authenticated %}
             <a href="{% url 'auth:logout' %}" class="menu__link">logout</a>

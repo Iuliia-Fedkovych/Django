@@ -18,15 +18,18 @@
     {% endblock %}
 </head>
 <body>
-    <div class="container">
-        <div class="login">
-            <div class="h2 text-center head">
-                Authentication
-            </div>
-            {%block content %}
-
-            {% endblock %}
+    <div class="admin_container">
+        <div class="h2 text-center head">
+            admin
         </div>
+        {% block menu %}
+            <div class="admin_menu">
+                {% include 'adminapp/includes/inc_menu.html' %}
+            </div>
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
     </div>
 
 </body>
