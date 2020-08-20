@@ -1,0 +1,47 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block content %}
+    <div class="product_read">
+        <div class="product_name">
+            Product: <strong>{{ object.category.name|title }} / {{ object.name|title }}</strong>
+        </div>
+        <img src="{{ object.image|media_folder_products }}" alt="{{ object.name }}">
+        <div class="summary">
+            <b>price</b>
+            <p>{{ object.price }}</p>
+            <b>quantity</b>
+            <p>{{ object.quantity }}</p>
+            <b>in catalogue</b>
+            <p>{% if object.is_active %}yes{% else %}no{% endif %}</p>
+            <p>
+                <button>
+                    <a href="{% url 'admin:product_update' object.pk %}">edit</a>
+                </button>
+            </p>
+            <p>
+                <button>
+                    <a href="{% url 'admin:product_delete' object.pk %}">delete</a>
+                </button>
+            </p>
+            <p>
+                <button>
+                    <a href="{% url 'admin:products' object.category.pk %}">back</a>
+                </button>
+            </p>
+        </div>
+        <div class="product_desc">
+            <b>short description</b>
+            <p>
+                {{ object.short_desc }}
+            </p>
+            <br>
+            <br>
+            <b>Description</b>
+            <p>
+                {{ object.description }}
+            </p>
+        </div>
+    </div>
+{% endblock %}
