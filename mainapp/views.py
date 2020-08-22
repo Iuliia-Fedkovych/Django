@@ -31,7 +31,6 @@ def main(request):
     context = {
         'title': 'home',
         'products': products,
-        'basket':basket,
     }
     return render(request, 'mainapp/index.html', context)
 
@@ -64,7 +63,6 @@ def products(request, pk=None, page=1):
             'products': products_paginator,
             'categories': categories,
             'category': category,
-            'basket': basket
         }
         return render(request, 'mainapp/products_list.html', context)
 
@@ -76,7 +74,6 @@ def products(request, pk=None, page=1):
         'hot_product': hot_product,
         'same_products': same_products,
         'categories': categories,
-        'basket': basket
     }
     return render(request, 'mainapp/products.html', context)
 
@@ -90,7 +87,6 @@ def contact(request):
     context = {
         'title': 'contacts',
         'locations': locations,
-        'basket': basket,
     }
     return render(request, 'mainapp/contact.html', context)
 
@@ -100,6 +96,5 @@ def product(request, pk):
         'title': 'product',
         'categories': ProductCategory.objects.filter(is_active=True, category__is_active=True),
         'product': get_object_or_404(Product, pk=pk),
-        'basket': get_basket(request.user),
     }
     return render(request, 'mainapp/product.html', context)
