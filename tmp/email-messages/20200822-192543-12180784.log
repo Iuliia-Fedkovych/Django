@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account confirmation django5
+From: django@geekshop.local
+To: django5@geek.local
+Date: Sat, 22 Aug 2020 16:25:43 -0000
+Message-ID: <159811354315.11332.1525622920580508205@MSI>
+
+To confirm your account django5 on the http://localhost:8000 use following link:http://localhost:8000/auth/verify/django5@geek.local/cc1f3fcedc6dda9059a310efd0ee6bdea7c2d18d
+-------------------------------------------------------------------------------
