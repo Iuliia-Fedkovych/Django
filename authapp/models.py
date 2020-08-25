@@ -7,7 +7,9 @@ from django.utils.timezone import now
 
 class ShopUser(AbstractUser):
     avatar = models.ImageField(upload_to='users_avatars', blank=True)
-    age = models.PositiveSmallIntegerField(verbose_name='age')
+    # age = models.PositiveSmallIntegerField(verbose_name='age')
+    age = models.PositiveSmallIntegerField(verbose_name='age', default=18)
+
 
     activation_key = models.CharField(max_length=128, blank=True)
     activation_key_expires = models.DateTimeField(default=(now() + timedelta(hours=48)))
