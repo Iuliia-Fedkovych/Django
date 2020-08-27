@@ -36,6 +36,8 @@ class ShopUserProfile(models.Model):
     tagline = models.CharField(verbose_name='tags', max_length=128, blank=True)
     aboutMe = models.TextField(verbose_name='about me', max_length=512, blank=True)
     gender = models.CharField(verbose_name='sex', max_length=1, choices=GENDER_CHOICE, blank=True)
+    language = models.CharField(verbose_name='language', max_length=128, blank=True)
+    url_social = models.CharField(verbose_name='url_social', max_length=512, blank=True)
 
     @receiver(post_save, sender=ShopUser)
     def create_user_profile(sender, instance, created, **kwargs):
