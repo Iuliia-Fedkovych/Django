@@ -94,7 +94,7 @@ def contact(request):
 def product(request, pk):
     context = {
         'title': 'product',
-        'categories': ProductCategory.objects.filter(is_active=True, category__is_active=True),
+        'categories': ProductCategory.objects.filter(is_active=True),
         'product': get_object_or_404(Product, pk=pk),
     }
     return render(request, 'mainapp/product.html', context)

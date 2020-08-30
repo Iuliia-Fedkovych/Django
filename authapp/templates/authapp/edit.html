@@ -5,6 +5,7 @@
     <form class="form-horisontal" enctype="multipart/form-data" action="{% url 'auth:edit' %}" method="post">
         {% csrf_token %}
         {{ edit_form.as_p }}
+        {{ profile_form.as_p }}
         <br>
         <input class="form-control" type="submit" value="save">
     </form>
