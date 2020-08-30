@@ -11,9 +11,20 @@
         <li><a href="{% url 'contact' %}" class="menu__link {% if request.resolver_match.url_name == 'contact' %}menu__link_active{% endif %}">CONTACT</a></li>
         {% if user.is_authenticated %}
         <li>
-            <a href = "{% url 'auth:edit' %}" class="menu__link">
-                {{ user.first_name|default:'User' }}
-            </a>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="" data-toggle="dropdown">
+                    {{ user.first_name|default:'User' }}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{% url 'auth:edit' %}">profile</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ordersapp:orders_list' %}">orders</a>
+                    </li>
+                </ul>
+            </div>
         </li>
         {% endif %}
         {% if user.is_superuser %}
