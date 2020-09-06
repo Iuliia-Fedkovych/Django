@@ -28,6 +28,7 @@ urlpatterns = [
     path('contact/', mainapp.contact, name='contact'),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('admin/', include('adminapp.urls', namespace='admin')),
+    path('order/', include('ordersapp.urls', namespace='order')),
     path('', include('social_django.urls', namespace='social')),
 
 
