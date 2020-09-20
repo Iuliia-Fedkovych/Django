@@ -1,4 +1,6 @@
 from django.contrib.auth.decorators import user_passes_test
+from django.db import connection
+from django.db.models import F
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -23,6 +25,8 @@ from adminapp.forms import ShopUserAdminEditForm, ProductCategoryEditForm, Produ
 #     }
 #
 #     return render(request, 'adminapp/users.html', context)
+from mainapp.views import db_profile_by_type
+
 
 class UsersListView(ListView):
     model = ShopUser
@@ -149,12 +153,21 @@ class ProductCategoryUpdateView(UpdateView):
     model = ProductCategory
     template_name = 'adminapp/category_update.html'
     success_url = reverse_lazy('admin:categories')
-    fields = '__all__'
+    form_class = ProductCategoryEditForm
+    # fields = '__all__'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'categories/edit'
         return context
+
+    def form_valid(self, form):
+        if 'discount' in form.cleaned_data:
+            discount = form.cleaned_data['discount']
+            if discount:
+                self.object.product_set.update(price=F('price')*(1-discount/100))
+                db_profile_by_type(self.__class__, 'UPDATE', connection.queries)
+        return super().form_valid(form)
 
 # @user_passes_test(lambda u: u.is_superuser)
 # def category_delete(request, pk):
