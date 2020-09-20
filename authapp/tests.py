@@ -35,9 +35,6 @@ class TestUserManagement (TestCase):
         self.assertEqual(response.context['user'], self.user)
         # self.assertIn('Пользователь', response.content.decode())
 
-    class TestUserManagement(TestCase):
-        ...
-
     def test_basket_login_redirect(self):
 
         # без логина должен переадресовать
